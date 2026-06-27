@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¡Buen viaje в Мадрид! 🇪🇸</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!--
+    SVG-СПРАЙТ ИКОНОК (Flaticon, бесплатные)
+    Иконки: flaticon.com — требуется атрибуция (см. футер)
+  -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <symbol id="icon-food" viewBox="0 0 24 24">
+      <path d="M11 9V3H9v6H7V3H5v6c0 2.21 1.79 4 4 4v9h2v-9c2.21 0 4-1.79 4-4V3h-2v6h-2zM19 3h-2v10c0 2.21-1.79 4-4 4v1c3.31 0 6-2.69 6-6V3z"/>
+    </symbol>
+    <symbol id="icon-art" viewBox="0 0 24 24">
+      <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+    </symbol>
+    <symbol id="icon-bike" viewBox="0 0 24 24">
+      <path d="M15.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM5 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zm5.8-10l2.4-2.4.8.8-1.5 1.5 1.6 1.6c.7-.1 1.4-.2 2.1-.2 3.3 0 5.9 2.7 5.9 5.9 0 .8-.2 1.5-.4 2.2l-1.5-1.5c.1-.2.1-.4.1-.7 0-2.2-1.8-3.9-3.9-3.9-.6 0-1.2.1-1.7.4l-1.9-1.9H10.8zM19 12c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 8.5c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5z"/>
+    </symbol>
+    <symbol id="icon-sparkles" viewBox="0 0 24 24">
+      <path d="M12 2l1.09 3.26L16 4l-1.26 3.09L18 8l-3.09 1.26L16 12l-3.26-1.09L12 14l-1.09-3.26L8 12l1.26-3.09L6 8l3.09-1.26L8 4l3.26 1.09L12 2zm-7 9l.73 2.18L8 12l-2.18.73L5 15l-.73-2.18L2 12l2.18-.73L5 9zm14 0l.73 2.18L22 12l-2.18.73L19 15l-.73-2.18L16 12l2.18-.73L19 9zM12 16l.55 1.64L14 18l-1.45.55L12 20l-.55-1.45L10 18l1.45-.55L12 16z"/>
+    </symbol>
+    <symbol id="icon-camera" viewBox="0 0 24 24">
+      <path d="M12 15.2c1.77 0 3.2-1.43 3.2-3.2s-1.43-3.2-3.2-3.2-3.2 1.43-3.2 3.2 1.43 3.2 3.2 3.2zM9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9zm3 15c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
+    </symbol>
+    <symbol id="icon-bulb" viewBox="0 0 24 24">
+      <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/>
+    </symbol>
+    <symbol id="icon-metro" viewBox="0 0 24 24">
+      <path d="M12 2c-4 0-8 .5-8 4v9.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h2.23l2-2H14l2 2H18v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-4-4-8-4zM7.5 17c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm3.5-7H6V6h5v4zm2 0V6h5v4h-5zm3.5 7c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+    </symbol>
+    <symbol id="icon-wallet" viewBox="0 0 24 24">
+      <path d="M21 7.28V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-2.28c.59-.35 1-.98 1-1.72V9c0-.74-.41-1.37-1-1.72zM20 9v6h-7V9h7zM5 19V5h14v2h-6c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h6v2H5z"/>
+      <circle cx="16" cy="12" r="1.5"/>
+    </symbol>
+    <symbol id="icon-house" viewBox="0 0 24 24">
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 24 24">
+      <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+      <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+    </symbol>
+    <symbol id="icon-language" viewBox="0 0 24 24">
+      <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/>
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+    </symbol>
+    <symbol id="icon-chevron" viewBox="0 0 24 24">
+      <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+    </symbol>
+  </svg>
+
+  <!-- ========== ФИКСИРОВАННАЯ ШАПКА ========== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <!-- ЗАМЕНИТЬ: текст логотипа при необходимости -->
+      <a href="#hero" class="header__logo">🇪🇸 ¡Madrid!</a>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#food" class="nav__link">Где поесть</a>
+        <a href="#art" class="nav__link">Искусство</a>
+        <a href="#sport" class="nav__link">Спорт</a>
+        <a href="#leisure" class="nav__link">Досуг</a>
+        <a href="#photos" class="nav__link">Фото</a>
+        <a href="#tips" class="nav__link">Лайфхаки</a>
+      </nav>
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg"></div>
+      <div class="hero__content">
+        <!-- ЗАМЕНИТЬ: подзаголовок -->
+        <p class="hero__subtitle">Подарок с любовью от команды</p>
+        <!-- ЗАМЕНИТЬ: главный заголовок (флаг 🇪🇸 оставляем) -->
+        <h1 class="hero__title">¡Buen viaje<br/>в Мадрид!</h1>
+        <!-- ЗАМЕНИТЬ: цитата-пожелание -->
+        <p class="hero__quote">
+          «Мадрид — это город, который не спит. Это место, где каждый закат превращается в праздник,
+          а каждая улочка хранит свою историю. Пусть твой новый chapter будет наполнен вдохновением,
+          вкусом и теплом!»
+        </p>
+        <a href="#food" class="hero__cta">Начать путешествие ↓</a>
+      </div>
+      <div class="hero__decor hero__decor--1" aria-hidden="true"></div>
+      <div class="hero__decor hero__decor--2" aria-hidden="true"></div>
+      <div class="hero__decor hero__decor--3" aria-hidden="true"></div>
+    </section>
+
+    <!-- Декоративный разделитель -->
+    <div class="section-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M0,24 C200,48 400,0 600,24 C800,48 1000,0 1200,24 L1200,48 L0,48 Z"/>
+      </svg>
+    </div>
+
+    <!-- ========== ГДЕ ВКУСНО ПОЕСТЬ ========== -->
+    <section class="section section--alt" id="food">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__badge">
+            <span class="icon" aria-hidden="true"><svg><use href="#icon-food"/></svg></span>
+            Гастрономия
+          </span>
+          <h2 class="section__title">Где вкусно поесть</h2>
+          <!-- ЗАМЕНИТЬ: описание секции -->
+          <p class="section__desc">
+            Мадрид — гастрономическая столица Испании. Вот места, которые обязательно стоит попробовать —
+            от легендарных таверн до уютных кафе с чуррос.
+          </p>
+        </div>
+        <div class="cards-grid cards-grid--3">
+
+          <article class="card card--restaurant">
+            <div class="card__img-wrap">
+              <!-- ЗАМЕНИТЬ: реальное фото ресторана -->
+              <img src="https://picsum.photos/seed/sanmiguel/400/300" alt="Mercado de San Miguel" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <div class="card__location">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-pin"/></svg></span>
+                Plaza de San Miguel
+              </div>
+              <h3 class="card__title">Mercado de San Miguel</h3>
+              <p class="card__text">
+                Легендарный гастрономический рынок рядом с Plaza Mayor. Здесь можно попробовать
+                свежие морепродукты, хамон иберико, сыры манчего и десятки видов тапас.
+                Идеальное место для первого знакомства с мадридской кухней.
+              </p>
+              <!-- ЗАМЕНИТЬ: реальная ссылка на Google Maps -->
+              <a href="https://maps.google.com/?q=Mercado+de+San+Miguel+Madrid" target="_blank" rel="noopener noreferrer" class="card__link">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-pin"/></svg></span>
+                Открыть на карте
+              </a>
+            </div>
+          </article>
+
+          <article class="card card--restaurant">
+            <div class="card__img-wrap">
+              <!-- ЗАМЕНИТЬ: реальное фото ресторана -->
+              <img src="https://picsum.photos/seed/botin/400/300" alt="Sobrino de Botín" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <div class="card__location">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-pin"/></svg></span>
+                Calle Cuchilleros, 17
+              </div>
+              <h3 class="card__title">Sobrino de Botín</h3>
+              <p class="card__text">
+                Старейший ресторан мира, основанный в 1725 году! Знаменит своим cochinillo
+                (молочный поросёнок) и cordero (ягнёнок), приготовленными в дровяной печи.
+                Здесь обедал даже Хемингуэй.
+              </p>
+              <!-- ЗАМЕНИТЬ: реальная ссылка на Google Maps -->
+              <a href="https://maps.google.com/?q=Sobrino+de+Botin+Madrid" target="_blank" rel="noopener noreferrer" class="card__link">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-pin"/></svg></span>
+                Открыть на карте
+              </a>
+            </div>
+          </article>
+
+          <article class="card card--restaurant">
+            <div class="card__img-wrap">
+              <!-- ЗАМЕНИТЬ: реальное фото ресторана -->
+              <img src="https://picsum.photos/seed/barraca/400/300" alt="La Barraca" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <div class="card__location">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-pin"/></svg></span>
+                Plaza de España, 8
+              </div>
+              <h3 class="card__title">La Barraca</h3>
+              <p class="card__text">
+                Один из лучших ресторанов паэльи в Мадриде. Классическая валенсийская паэлья,
+                paella negra с чернилами каракатицы и другие рисовые блюда. Уютная атмосфера
+                и щедрые порции.
+              </p>
+              <a href="https://maps.google.com/?q=La+Barraca+restaurante+Madrid" target="_blank" rel="noopener noreferrer" class="card__link">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-pin"/></svg></span>
+                Открыть на карте
+              </a>
+            </div>
+          </article>
+
+          <article class="card card--restaurant">
+            <div class="card__img-wrap">
+              <!-- ЗАМЕНИТЬ: реальное фото кафе -->
+              <img src="https://picsum.photos/seed/sangines/400/300" alt="Chocolatería San Ginés" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <div class="card__location">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-pin"/></svg></span>
+                Pasadizo de San Ginés, 5
+              </div>
+              <h3 class="card__title">Chocolatería San Ginés</h3>
+              <p class="card__text">
+                Легендарное кафе, работающее с 1894 года. Знаменитые чуррос с густым горячим
+                шоколадом — must have! Работает круглосуточно, так что заглянуть можно
+                и поздним вечером.
+              </p>
+              <a href="https://maps.google.com/?q=Chocolateria+San+Gines+Madrid" target="_blank" rel="noopener noreferrer" class="card__link">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-pin"/></svg></span>
+                Открыть на карте
+              </a>
+            </div>
+          </article>
+
+          <article class="card card--restaurant">
+            <div class="card__img-wrap">
+              <!-- ЗАМЕНИТЬ: реальное фото ресторана -->
+              <img src="https://picsum.photos/seed/oriente/400/300" alt="Café de Oriente" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <div class="card__location">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-pin"/></svg></span>
+                Plaza de Oriente, 2
+              </div>
+              <h3 class="card__title">Café de Oriente</h3>
+              <p class="card__text">
+                Ресторан с потрясающей террасой и видом на Королевский дворец и сады.
+                Современная испанская кухня с авторским подходом. Идеальное место
+                для особого ужина.
+              </p>
+              <a href="https://maps.google.com/?q=Cafe+de+Oriente+Madrid" target="_blank" rel="noopener noreferrer" class="card__link">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-pin"/></svg></span>
+                Открыть на карте
+              </a>
+            </div>
+          </article>
+
+          <article class="card card--restaurant">
+            <div class="card__img-wrap">
+              <!-- ЗАМЕНИТЬ: реальное фото ресторана -->
+              <img src="https://picsum.photos/seed/juanalaloca/400/300" alt="Juana la Loca" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <div class="card__location">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-pin"/></svg></span>
+                Calle de la Infanta, 30
+              </div>
+              <h3 class="card__title">Juana la Loca</h3>
+              <p class="card__text">
+                Уютный тапас-бар в самом сердце Мадрида. Креативные тапас по доступным ценам,
+                живая атмосфера и отличные коктейли. Одно из любимых мест местных жителей.
+              </p>
+              <a href="https://maps.google.com/?q=Juana+la+Loca+Madrid" target="_blank" rel="noopener noreferrer" class="card__link">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-pin"/></svg></span>
+                Открыть на карте
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider section-divider--flip section-divider--bg" aria-hidden="true">
+      <svg viewBox="0 0 1200 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M0,24 C200,48 400,0 600,24 C800,48 1000,0 1200,24 L1200,48 L0,48 Z"/>
+      </svg>
+    </div>
+
+    <!-- ========== ИСКУССТВО И ВЫСТАВКИ ========== -->
+    <section class="section" id="art">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__badge">
+            <span class="icon" aria-hidden="true"><svg><use href="#icon-art"/></svg></span>
+            Культура
+          </span>
+          <h2 class="section__title">Искусство и выставки</h2>
+          <p class="section__desc">
+            Мадрид — один из мировых центров искусства. «Золотой треугольник» музеев,
+            современные галереи и уличное искусство — скучно не будет.
+          </p>
+        </div>
+        <div class="cards-grid cards-grid--2">
+
+          <article class="card card--museum">
+            <div class="card__img-wrap">
+              <img src="https://picsum.photos/seed/prado/400/300" alt="Музей Прадо" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Музей Прадо</h3>
+              <p class="card__text">
+                Один из крупнейших музеев мира. Коллекция европейского искусства XI–XVIII веков:
+                Веласкес, Гойя, Эль Греко, Босх, Рубенс. На один визит нужно минимум 3–4 часа,
+                а лучше — целый день. Бесплатный вход по вечерам (пн–сб 18:00–20:00, вс 17:00–19:00).
+              </p>
+              <a href="https://www.museodelprado.es" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                Перейти на сайт →
+              </a>
+            </div>
+          </article>
+
+          <article class="card card--museum">
+            <div class="card__img-wrap">
+              <img src="https://picsum.photos/seed/reinasofia/400/300" alt="Музей Reina Sofía" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Музей Reina Sofía</h3>
+              <p class="card__text">
+                Главный музей современного искусства Испании. Здесь хранится знаменитая «Герника»
+                Пикассо, а также работы Дали, Миро, Хуана Гриса. Потрясающая коллекция
+                искусства XX–XXI веков. Бесплатный вход: пн–сб 19:00–21:00, вс 13:30–19:00.
+              </p>
+              <a href="https://www.museoreinasofia.es" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                Перейти на сайт →
+              </a>
+            </div>
+          </article>
+
+          <article class="card card--museum">
+            <div class="card__img-wrap">
+              <img src="https://picsum.photos/seed/thyssen/400/300" alt="Музей Тиссена-Борнемисы" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Музей Тиссена-Борнемисы</h3>
+              <p class="card__text">
+                Третья вершина «золотого треугольника». Уникальная частная коллекция, охватывающая
+                восемь веков искусства: от готики до поп-арта. Ван Гог, Моне, Ренуар, Хоппер,
+                Уорхол — всё в одном месте. Бесплатный вход: понедельник 12:00–16:00.
+              </p>
+              <a href="https://www.museothyssen.org" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                Перейти на сайт →
+              </a>
+            </div>
+          </article>
+
+          <article class="card card--museum">
+            <div class="card__img-wrap">
+              <img src="https://picsum.photos/seed/caixaforum/400/300" alt="CaixaForum" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">CaixaForum</h3>
+              <p class="card__text">
+                Культурный центр с потрясающим вертикальным садом на фасаде (30 000 растений!).
+                Внутри — временные выставки мирового уровня, фотография, дизайн, архитектура.
+                Само здание — произведение искусства от архитекторов Herzog &amp; de Meuron.
+              </p>
+              <a href="https://www.lacaixa.es/en/obrasocial/caixaforum-madrid.html" target="_blank" rel="noopener noreferrer" class="btn btn--outline">
+                Перейти на сайт →
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M0,24 C200,48 400,0 600,24 C800,48 1000,0 1200,24 L1200,48 L0,48 Z"/>
+      </svg>
+    </div>
+
+    <!-- ========== СПОРТ И АКТИВНЫЙ ОТДЫХ ========== -->
+    <section class="section section--alt" id="sport">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__badge">
+            <span class="icon" aria-hidden="true"><svg><use href="#icon-bike"/></svg></span>
+            Активность
+          </span>
+          <h2 class="section__title">Спорт и активный отдых</h2>
+          <p class="section__desc">
+            Мадрид — отличный город для активного образа жизни. Велодорожки, парки,
+            открытые тренировки — выбирай то, что по душе!
+          </p>
+        </div>
+        <div class="sport-grid">
+
+          <article class="sport-block">
+            <div class="sport-block__img">
+              <img src="https://picsum.photos/seed/madridbike/600/400" alt="Велосипедные маршруты Мадрида" loading="lazy" width="600" height="400" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="sport-block__content">
+              <h3 class="sport-block__title">Велосипедные маршруты</h3>
+              <p class="sport-block__text">
+                В Мадриде более 500 км велодорожек! Главные маршруты:
+              </p>
+              <ul class="sport-block__list">
+                <li><strong>Madrid Río</strong> — живописная набережная вдоль реки Мансанарес, 8 км через парки и мосты</li>
+                <li><strong>Casa de Campo</strong> — огромный парк (1700 га!) с грунтовыми и асфальтовыми трассами</li>
+                <li><strong>Parque del Retiro</strong> — классический маршрут вокруг озера, идеально для утренних прогулок</li>
+                <li><strong>Anillo Verde Ciclista</strong> — 64-километровое велосипедное кольцо вокруг Мадрида</li>
+              </ul>
+              <p class="sport-block__note">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-bulb"/></svg></span>
+                <span>Сервис проката <strong>BiciMAD</strong> — городские велосипеды на электротяге.
+                Станции по всему городу, первая поездка бесплатно!</span>
+              </p>
+            </div>
+          </article>
+
+          <article class="sport-block sport-block--reverse">
+            <div class="sport-block__img">
+              <img src="https://picsum.photos/seed/madridgym/600/400" alt="Спортивные клубы Мадрида" loading="lazy" width="600" height="400" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="sport-block__content">
+              <h3 class="sport-block__title">Спортивные клубы и секции</h3>
+              <p class="sport-block__text">
+                Лучшие места для тренировок в Мадриде:
+              </p>
+              <ul class="sport-block__list">
+                <li><strong>Metropolitan Gym</strong> — премиум-фитнес в центре, бассейн, групповые занятия</li>
+                <li><strong>David Lloyd Aravaca</strong> — большой спортивный клуб с теннисными кортами и спа</li>
+                <li><strong>Basic-Fit</strong> — бюджетная сеть тренажёрных залов по всему городу</li>
+                <li><strong>Running clubs</strong> — беговые сообщества: Madrid Runners, Grupo de Corredores del Retiro</li>
+              </ul>
+              <div class="sport-block__links">
+                <!-- ЗАМЕНИТЬ: реальные ссылки на сайты клубов -->
+                <a href="#" class="btn btn--small" target="_blank" rel="noopener noreferrer">Metropolitan Gym →</a>
+                <a href="#" class="btn btn--small" target="_blank" rel="noopener noreferrer">David Lloyd →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="sport-block">
+            <div class="sport-block__img">
+              <img src="https://picsum.photos/seed/madridyoga/600/400" alt="Йога и пилатес на открытом воздухе" loading="lazy" width="600" height="400" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="sport-block__content">
+              <h3 class="sport-block__title">Йога и пилатес на воздухе</h3>
+              <p class="sport-block__text">
+                Мадридские парки — идеальное место для практик на свежем воздухе:
+              </p>
+              <ul class="sport-block__list">
+                <li><strong>Parque del Retiro</strong> — бесплатные групповые занятия йогой по выходным (ищите у озера!)</li>
+                <li><strong>Casa de Campo</strong> — утренние пробежки и медитации среди сосен</li>
+                <li><strong>Madrid Río</strong> — открытые площадки для пилатеса и стретчинга</li>
+                <li><strong>Templo de Debod</strong> — йога на закате с видом на Королевский дворец</li>
+              </ul>
+              <p class="sport-block__note">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-bulb"/></svg></span>
+                <span>Приложение <strong>Meetup</strong> — ищи бесплатные йога-сессии в парках.
+                Многие проводятся на английском!</span>
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider section-divider--flip section-divider--bg" aria-hidden="true">
+      <svg viewBox="0 0 1200 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M0,24 C200,48 400,0 600,24 C800,48 1000,0 1200,24 L1200,48 L0,48 Z"/>
+      </svg>
+    </div>
+
+    <!-- ========== ДОСУГ И НЕОБЫЧНЫЕ АКТИВНОСТИ ========== -->
+    <section class="section" id="leisure">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__badge">
+            <span class="icon" aria-hidden="true"><svg><use href="#icon-sparkles"/></svg></span>
+            Впечатления
+          </span>
+          <h2 class="section__title">Досуг и необычные активности</h2>
+          <p class="section__desc">
+            Погрузись в испанскую культуру через танцы, кулинарию и ремёсла.
+            Каждый из этих мастер-классов — незабываемый опыт!
+          </p>
+        </div>
+        <div class="cards-grid cards-grid--3">
+
+          <article class="card card--activity">
+            <div class="card__img-wrap">
+              <img src="https://picsum.photos/seed/flamenco/400/300" alt="Мастер-класс фламенко" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Фламенко</h3>
+              <p class="card__text">
+                Научись основам страстного испанского танца! Мастер-классы для начинающих
+                в Corral de la Morería — самом известном таблао Мадрида.
+                Групповые и индивидуальные занятия, костюм предоставляется.
+              </p>
+              <!-- ЗАМЕНИТЬ: реальная ссылка на запись -->
+              <a href="#" class="btn btn--primary">Записаться →</a>
+            </div>
+          </article>
+
+          <article class="card card--activity">
+            <div class="card__img-wrap">
+              <img src="https://picsum.photos/seed/cookingmadrid/400/300" alt="Кулинарный мастер-класс" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Кулинарные мастер-классы</h3>
+              <p class="card__text">
+                Научись готовить настоящую паэлью, тапас и тортилью!
+                Madrid Cooking School проводит занятия на английском и испанском.
+                Включает поход на рынок, готовку из 4 блюд и дегустацию с вином.
+              </p>
+              <a href="#" class="btn btn--primary">Записаться →</a>
+            </div>
+          </article>
+
+          <article class="card card--activity">
+            <div class="card__img-wrap">
+              <img src="https://picsum.photos/seed/pottery/400/300" alt="Гончарное дело" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Гончарное дело</h3>
+              <p class="card__text">
+                Создай свою первую керамическую чашку на гончарном круге!
+                Студия Cerámicas Moncloa предлагает курсы для начинающих.
+                Готовое изделие заберёшь домой через 2 недели после обжига.
+              </p>
+              <a href="#" class="btn btn--primary">Записаться →</a>
+            </div>
+          </article>
+
+          <article class="card card--activity">
+            <div class="card__img-wrap">
+              <img src="https://picsum.photos/seed/winetasting/400/300" alt="Дегустация вин" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Дегустация вин</h3>
+              <p class="card__text">
+                Испания — третий крупнейший винодельческий регион мира.
+                Винные туры и дегустации в сомельерских школах Мадрида.
+                Узнай разницу между Риохой, Рибера-дель-Дуэро и Приоратом.
+              </p>
+              <a href="#" class="btn btn--primary">Записаться →</a>
+            </div>
+          </article>
+
+          <article class="card card--activity">
+            <div class="card__img-wrap">
+              <img src="https://picsum.photos/seed/rooftopmadrid/400/300" alt="Руфтоп-бары" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Руфтоп-бары</h3>
+              <p class="card__text">
+                Вечерний Мадрид с высоты — это магия! Лучшие руфтопы:
+                Círculo de Bellas Artes (самый знаменитый), Azotea del Hotel Riu,
+                The Roof at The Principal. Встречай закаты с коктейлем в руке!
+              </p>
+              <a href="#" class="btn btn--primary">Подробнее →</a>
+            </div>
+          </article>
+
+          <article class="card card--activity">
+            <div class="card__img-wrap">
+              <img src="https://picsum.photos/seed/streetart/400/300" alt="Стрит-арт туры" loading="lazy" width="400" height="300" />
+              <span class="card__img-label">
+                <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+                фото позже
+              </span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Стрит-арт туры</h3>
+              <p class="card__text">
+                Районы Lavapiés, Malasaña и La Latina — настоящий музей под открытым небом.
+                Бесплатные пешеходные экскурсии по стрит-арту проводятся каждое воскресенье.
+                Открой для себя уличное искусство Мадрида!
+              </p>
+              <a href="#" class="btn btn--primary">Записаться →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true">
+      <svg viewBox="0 0 1200 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M0,24 C200,48 400,0 600,24 C800,48 1000,0 1200,24 L1200,48 L0,48 Z"/>
+      </svg>
+    </div>
+
+    <!-- ========== ФОТО КОМАНДЫ ========== -->
+    <section class="section section--alt" id="photos">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__badge">
+            <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+            Память
+          </span>
+          <h2 class="section__title">Наши общие моменты</h2>
+          <p class="section__desc">
+            Добавим сюда наши совместные фотографии — чтобы тёплые воспоминания
+            всегда были рядом, где бы ты ни была!
+          </p>
+        </div>
+        <div class="photo-grid">
+          <!-- ЗАМЕНИТЬ: реальные фотографии команды (8 штук) -->
+          <div class="photo-grid__item photo-grid__item--tall">
+            <img src="https://picsum.photos/seed/team1/400/600" alt="Фото команды 1" loading="lazy" width="400" height="600" />
+          </div>
+          <div class="photo-grid__item">
+            <img src="https://picsum.photos/seed/team2/400/300" alt="Фото команды 2" loading="lazy" width="400" height="300" />
+          </div>
+          <div class="photo-grid__item">
+            <img src="https://picsum.photos/seed/team3/400/300" alt="Фото команды 3" loading="lazy" width="400" height="300" />
+          </div>
+          <div class="photo-grid__item photo-grid__item--tall">
+            <img src="https://picsum.photos/seed/team4/400/600" alt="Фото команды 4" loading="lazy" width="400" height="600" />
+          </div>
+          <div class="photo-grid__item">
+            <img src="https://picsum.photos/seed/team5/400/300" alt="Фото команды 5" loading="lazy" width="400" height="300" />
+          </div>
+          <div class="photo-grid__item">
+            <img src="https://picsum.photos/seed/team6/400/300" alt="Фото команды 6" loading="lazy" width="400" height="300" />
+          </div>
+          <div class="photo-grid__item photo-grid__item--tall">
+            <img src="https://picsum.photos/seed/team7/400/600" alt="Фото команды 7" loading="lazy" width="400" height="600" />
+          </div>
+          <div class="photo-grid__item">
+            <img src="https://picsum.photos/seed/team8/400/300" alt="Фото команды 8" loading="lazy" width="400" height="300" />
+          </div>
+        </div>
+        <p class="photos__note">
+          <span class="icon" aria-hidden="true"><svg><use href="#icon-camera"/></svg></span>
+          Добавим наши фото позже
+        </p>
+      </div>
+    </section>
+
+    <div class="section-divider section-divider--flip section-divider--bg" aria-hidden="true">
+      <svg viewBox="0 0 1200 48" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="currentColor" d="M0,24 C200,48 400,0 600,24 C800,48 1000,0 1200,24 L1200,48 L0,48 Z"/>
+      </svg>
+    </div>
+
+    <!-- ========== ЛАЙФХАКИ ========== -->
+    <section class="section" id="tips">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__badge">
+            <span class="icon" aria-hidden="true"><svg><use href="#icon-bulb"/></svg></span>
+            Полезное
+          </span>
+          <h2 class="section__title">Лайфхаки для жизни в Мадриде</h2>
+          <p class="section__desc">
+            Всё, что нужно знать для комфортной жизни в новом городе.
+            Сохрани себе — пригодится в первые недели!
+          </p>
+        </div>
+        <div class="accordion">
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" type="button" aria-expanded="false">
+              <span class="accordion__icon" aria-hidden="true">
+                <span class="icon"><svg><use href="#icon-metro"/></svg></span>
+              </span>
+              <span class="accordion__title">Как пользоваться метро</span>
+              <span class="accordion__arrow" aria-hidden="true"><svg><use href="#icon-chevron"/></svg></span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__body">
+                <p>Мадридское метро — одно из лучших в Европе. 13 линий, работает с 6:00 до 1:30 (в пт–сб до 2:00).</p>
+                <ul>
+                  <li>Купи карту <strong>Metrobús/MetroCard</strong> на 10 поездок (~€12.20) — выгоднее разовых билетов</li>
+                  <li>Скачай приложение <strong>MiTransport</strong> — показывает маршрут в реальном времени</li>
+                  <li>Оформите карту <strong>Abono Transportes</strong> (месячный проездной ~€54.60 для зоны А)</li>
+                  <li>В метро Zone A покрывает весь город и аэропорт (доплата за аэропорт €3)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" type="button" aria-expanded="false">
+              <span class="accordion__icon" aria-hidden="true">
+                <span class="icon"><svg><use href="#icon-wallet"/></svg></span>
+              </span>
+              <span class="accordion__title">Валюта и финансы</span>
+              <span class="accordion__arrow" aria-hidden="true"><svg><use href="#icon-chevron"/></svg></span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__body">
+                <p>Испания использует евро (€). Обмен валюты:</p>
+                <ul>
+                  <li>Лучше всего — снимать в банкоматах (cajero automático). Избегай обменников в аэропорту!</li>
+                  <li>Карты Visa/Mastercard принимают практически везде, даже в маленьких барах</li>
+                  <li>Apple Pay / Google Pay работают почти во всех заведениях</li>
+                  <li>Для крупных сумм — банки Santander, BBVA, CaixaBank (лучший курс)</li>
+                  <li>Чаевые: 5–10% в ресторанах, в барах можно просто округлить счёт</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" type="button" aria-expanded="false">
+              <span class="accordion__icon" aria-hidden="true">
+                <span class="icon"><svg><use href="#icon-house"/></svg></span>
+              </span>
+              <span class="accordion__title">Как найти жильё</span>
+              <span class="accordion__arrow" aria-hidden="true"><svg><use href="#icon-chevron"/></svg></span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__body">
+                <p>Поиск квартиры в Мадриде — популярные районы и ресурсы:</p>
+                <ul>
+                  <li><strong>Районы для жизни:</strong> Salamanca (премиум), Chamberí (уютный), Malasaña (модный), Retiro (тихий)</li>
+                  <li><strong>Сайты поиска:</strong> Idealista.com, Fotocasa.es, Badi (для комнат)</li>
+                  <li>Обычно просят: контракт, зарплатные справки, залог за 2 месяца</li>
+                  <li>Средняя аренда: €900–1400 за 1-комнатную в центре, €700–1000 на окраинах</li>
+                  <li>Осторожно с мошенниками — никогда не переводи деньги без просмотра!</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" type="button" aria-expanded="false">
+              <span class="accordion__icon" aria-hidden="true">
+                <span class="icon"><svg><use href="#icon-phone"/></svg></span>
+              </span>
+              <span class="accordion__title">Какие приложения установить</span>
+              <span class="accordion__arrow" aria-hidden="true"><svg><use href="#icon-chevron"/></svg></span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__body">
+                <p>Must-have приложения для жизни в Мадриде:</p>
+                <ul>
+                  <li><strong>MiTransport</strong> — общественный транспорт в реальном времени</li>
+                  <li><strong>Cabify / FreeNow</strong> — вызов такси (Cabify — испанский аналог Uber)</li>
+                  <li><strong>TheFork</strong> — бронирование ресторанов со скидками до 50%</li>
+                  <li><strong>Glovo / Uber Eats</strong> — доставка еды</li>
+                  <li><strong>Salud Madrid</strong> — запись к врачу (если оформлена страховка)</li>
+                  <li><strong>DeepL</strong> — лучший переводчик для испанского</li>
+                  <li><strong>Meetup</strong> — находить мероприятия и новые знакомства</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" type="button" aria-expanded="false">
+              <span class="accordion__icon" aria-hidden="true">
+                <span class="icon"><svg><use href="#icon-clock"/></svg></span>
+              </span>
+              <span class="accordion__title">Распорядок дня и сиеста</span>
+              <span class="accordion__arrow" aria-hidden="true"><svg><use href="#icon-chevron"/></svg></span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__body">
+                <p>Испанский ритм жизни отличается от привычного:</p>
+                <ul>
+                  <li>Завтрак: 8:00–10:00 (кофе + тост с томате или круассан)</li>
+                  <li>Обед: 14:00–16:00 (главный приём пищи! «Menu del día» — €12–18)</li>
+                  <li>Сиеста: 14:00–17:00 (многие магазины закрываются)</li>
+                  <li>Ужин: 21:00–23:00 (да, поздно! Это нормально)</li>
+                  <li>Ночная жизнь начинается после полуночи</li>
+                  <li>Совет: планируй дела с учётом сиесты — с 14 до 17 многие места закрыты</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__trigger" type="button" aria-expanded="false">
+              <span class="accordion__icon" aria-hidden="true">
+                <span class="icon"><svg><use href="#icon-language"/></svg></span>
+              </span>
+              <span class="accordion__title">Языковой барьер</span>
+              <span class="accordion__arrow" aria-hidden="true"><svg><use href="#icon-chevron"/></svg></span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__body">
+                <p>Несколько советов по языку:</p>
+                <ul>
+                  <li>Начни учить базовый испанский заранее — даже «hola» и «gracias» откроют сердца</li>
+                  <li>Языковые школы: Official Language School (EOI), International House, Enforex</li>
+                  <li>Tandem-встречи — бесплатный обмен языками (испанский ↔ русский/английский)</li>
+                  <li>Смотри испанские сериалы с субтитрами: «La Casa de Papel», «Élite»</li>
+                  <li>Не бойся ошибок! Испанцы очень дружелюбны и всегда помогут</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== ФУТЕР ========== -->
+  <footer class="footer">
+    <div class="container">
+      <!-- ЗАМЕНИТЬ: подпись от команды -->
+      <p class="footer__text">С любовью, команда ❤️</p>
+      <p class="footer__sub">¡Te echaremos de menos! Мы будем скучать</p>
+      <p class="footer__attribution">
+        Icons by <a href="https://www.flaticon.com" target="_blank" rel="noopener noreferrer">Flaticon</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
