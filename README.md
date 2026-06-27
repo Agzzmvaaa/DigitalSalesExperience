@@ -2,6 +2,8 @@
 
 Одностраничный сайт-подарок с гидом по Мадриду: рестораны, музеи, спорт, досуг, фото команды и лайфхаки.
 
+**Живой сайт:** https://agzzmvaaa.github.io/DigitalSalesExperience/
+
 ## Структура
 
 ```
@@ -25,7 +27,7 @@ python3 -m http.server 8080
 1. Зайдите в **Settings → Pages** репозитория
 2. В **Build and deployment** выберите **Source: GitHub Actions**
 3. При пуше в `main` workflow `.github/workflows/deploy.yml` автоматически опубликует сайт
-4. Адрес: `https://agzzmvaaa.github.io/DigitalSalesExperience/`
+4. Адрес: https://agzzmvaaa.github.io/DigitalSalesExperience/
 
 ## Что заменить перед подарком
 
@@ -36,3 +38,9 @@ python3 -m http.server 8080
 - ссылки на Google Maps и сайты
 - 8 фотографий команды в секции «Наши общие моменты»
 - ссылки-заглушки `href="#"` на клубы и активности
+
+## Релизы
+
+| Версия | Описание |
+|--------|----------|
+| v1.0.0 | Первый рабочий релиз: исправлены имена файлов, добавлен CI/CD для GitHub Pages |
