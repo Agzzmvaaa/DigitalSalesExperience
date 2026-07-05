@@ -66,17 +66,28 @@
     <div class="header__inner">
       <a href="#hero" class="header__logo">🇪🇸 ¡Madrid!</a>
       <nav class="nav" id="nav" aria-label="Основная навигация">
-        <a href="#food" class="nav__link">Где поесть</a>
-        <a href="#art" class="nav__link">Искусство</a>
-        <a href="#sport" class="nav__link">Спорт</a>
-        <a href="#leisure" class="nav__link">Досуг</a>
-        <a href="#photos" class="nav__link">Фото</a>
-        <a href="#tips" class="nav__link">Лайфхаки</a>
+        <div class="nav__head">
+          <span class="nav__title">Меню</span>
+          <button class="nav__close" id="navClose" type="button" aria-label="Закрыть меню">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="nav__links">
+          <a href="#food" class="nav__link">Где поесть</a>
+          <a href="#art" class="nav__link">Искусство</a>
+          <a href="#sport" class="nav__link">Спорт</a>
+          <a href="#leisure" class="nav__link">Досуг</a>
+          <a href="#photos" class="nav__link">Фото</a>
+          <a href="#tips" class="nav__link">Лайфхаки</a>
+        </div>
       </nav>
       <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
-        <span></span><span></span><span></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
       </button>
     </div>
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
   </header>
 
   <main>
@@ -191,7 +202,7 @@
 
           <article class="card card--restaurant">
             <div class="card__img-wrap">
-              <img src="images/places/san-gines.jpg" alt="Chocolatería San Ginés" loading="lazy" width="400" height="300" />
+              <img src="images/places/san-gines.jpg" alt="Чуррос с горячим шоколадом — Chocolatería San Ginés" loading="lazy" width="400" height="300" />
             </div>
             <div class="card__body">
               <div class="card__location">
@@ -326,7 +337,7 @@
 
           <article class="card card--museum">
             <div class="card__img-wrap">
-              <img src="images/places/museo-prado.jpg" alt="Музей Прадо" loading="lazy" width="400" height="300" />
+              <img src="images/places/museo-prado.jpg" alt="Зал с картинами в Музее Прадо, Мадрид" loading="lazy" width="400" height="300" />
             </div>
             <div class="card__body">
               <h3 class="card__title">Музей Прадо</h3>
@@ -499,7 +510,7 @@
 
           <article class="sport-block">
             <div class="sport-block__img">
-              <img src="images/places/debod.jpg" alt="Йога и пилатес на открытом воздухе" loading="lazy" width="600" height="400" />
+              <img src="images/places/yoga-park.jpg" alt="Йога и пилатес на открытом воздухе" loading="lazy" width="600" height="400" />
             </div>
             <div class="sport-block__content">
               <h3 class="sport-block__title">Йога и пилатес на воздухе</h3>
@@ -719,50 +730,6 @@
           <div class="accordion__item">
             <button class="accordion__trigger" type="button" aria-expanded="false">
               <span class="accordion__icon" aria-hidden="true">
-                <span class="icon"><svg><use href="#icon-wallet"/></svg></span>
-              </span>
-              <span class="accordion__title">Валюта и финансы</span>
-              <span class="accordion__arrow" aria-hidden="true"><svg><use href="#icon-chevron"/></svg></span>
-            </button>
-            <div class="accordion__content">
-              <div class="accordion__body">
-                <p>Испания использует евро (€). Обмен валюты:</p>
-                <ul>
-                  <li>Лучше всего — снимать в банкоматах (cajero automático). Избегай обменников в аэропорту!</li>
-                  <li>Карты Visa/Mastercard принимают практически везде, даже в маленьких барах</li>
-                  <li>Apple Pay / Google Pay работают почти во всех заведениях</li>
-                  <li>Для крупных сумм — банки Santander, BBVA, CaixaBank (лучший курс)</li>
-                  <li>Чаевые: 5–10% в ресторанах, в барах можно просто округлить счёт</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion__item">
-            <button class="accordion__trigger" type="button" aria-expanded="false">
-              <span class="accordion__icon" aria-hidden="true">
-                <span class="icon"><svg><use href="#icon-house"/></svg></span>
-              </span>
-              <span class="accordion__title">Как найти жильё</span>
-              <span class="accordion__arrow" aria-hidden="true"><svg><use href="#icon-chevron"/></svg></span>
-            </button>
-            <div class="accordion__content">
-              <div class="accordion__body">
-                <p>Поиск квартиры в Мадриде — популярные районы и ресурсы:</p>
-                <ul>
-                  <li><strong>Районы для жизни:</strong> Salamanca (премиум), Chamberí (уютный), Malasaña (модный), Retiro (тихий)</li>
-                  <li><strong>Сайты поиска:</strong> Idealista.com, Fotocasa.es, Badi (для комнат)</li>
-                  <li>Обычно просят: контракт, зарплатные справки, залог за 2 месяца</li>
-                  <li>Средняя аренда: €900–1400 за 1-комнатную в центре, €700–1000 на окраинах</li>
-                  <li>Осторожно с мошенниками — никогда не переводи деньги без просмотра!</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion__item">
-            <button class="accordion__trigger" type="button" aria-expanded="false">
-              <span class="accordion__icon" aria-hidden="true">
                 <span class="icon"><svg><use href="#icon-phone"/></svg></span>
               </span>
               <span class="accordion__title">Какие приложения установить</span>
@@ -802,28 +769,6 @@
                   <li>Ужин: 21:00–23:00 (да, поздно! Это нормально)</li>
                   <li>Ночная жизнь начинается после полуночи</li>
                   <li>Совет: планируй дела с учётом сиесты — с 14 до 17 многие места закрыты</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="accordion__item">
-            <button class="accordion__trigger" type="button" aria-expanded="false">
-              <span class="accordion__icon" aria-hidden="true">
-                <span class="icon"><svg><use href="#icon-language"/></svg></span>
-              </span>
-              <span class="accordion__title">Языковой барьер</span>
-              <span class="accordion__arrow" aria-hidden="true"><svg><use href="#icon-chevron"/></svg></span>
-            </button>
-            <div class="accordion__content">
-              <div class="accordion__body">
-                <p>Несколько советов по языку:</p>
-                <ul>
-                  <li>Начни учить базовый испанский заранее — даже «hola» и «gracias» откроют сердца</li>
-                  <li>Языковые школы: Official Language School (EOI), International House, Enforex</li>
-                  <li>Tandem-встречи — бесплатный обмен языками (испанский ↔ русский/английский)</li>
-                  <li>Смотри испанские сериалы с субтитрами: «La Casa de Papel», «Élite»</li>
-                  <li>Не бойся ошибок! Испанцы очень дружелюбны и всегда помогут</li>
                 </ul>
               </div>
             </div>

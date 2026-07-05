@@ -6,23 +6,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const burger = document.getElementById('burger');
   const nav = document.getElementById('nav');
+  const navOverlay = document.getElementById('navOverlay');
+  const navClose = document.getElementById('navClose');
   const header = document.getElementById('header');
 
   // ----------------------------------------
-  // 1. Бургер-меню
+  // 1. Бургер-меню (боковая панель)
   // ----------------------------------------
   const closeMenu = () => {
     burger.classList.remove('burger--active');
     nav.classList.remove('nav--open');
+    navOverlay.classList.remove('nav-overlay--visible');
+    navOverlay.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('menu-open');
     burger.setAttribute('aria-expanded', 'false');
+    burger.setAttribute('aria-label', 'Открыть меню');
   };
 
   const openMenu = () => {
     burger.classList.add('burger--active');
     nav.classList.add('nav--open');
+    navOverlay.classList.add('nav-overlay--visible');
+    navOverlay.setAttribute('aria-hidden', 'false');
     document.body.classList.add('menu-open');
     burger.setAttribute('aria-expanded', 'true');
+    burger.setAttribute('aria-label', 'Закрыть меню');
   };
 
   burger.addEventListener('click', () => {
@@ -32,6 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
       openMenu();
     }
   });
+
+  navClose.addEventListener('click', closeMenu);
+  navOverlay.addEventListener('click', closeMenu);
 
   nav.querySelectorAll('.nav__link').forEach(link => {
     link.addEventListener('click', (e) => {
@@ -108,6 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && nav.classList.contains('nav--open')) {
+      closeMenu();
+    }
+
     document.querySelectorAll('.accordion__item--active').forEach(item => {
       const content = item.querySelector('.accordion__content');
       content.style.maxHeight = `${content.scrollHeight}px`;
