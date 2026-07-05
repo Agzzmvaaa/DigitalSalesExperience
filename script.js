@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 768 && nav.classList.contains('nav--open')) {
+    if (window.innerWidth > 992 && nav.classList.contains('nav--open')) {
       closeMenu();
     }
 

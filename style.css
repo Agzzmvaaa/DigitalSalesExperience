@@ -240,23 +240,22 @@ button {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  width: 44px;
-  height: 44px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  width: 46px;
+  height: 46px;
+  background: var(--color-terracotta);
+  border: none;
   border-radius: var(--radius-sm);
   cursor: pointer;
   padding: 10px;
   flex-shrink: 0;
-  z-index: 1101;
-  margin-left: auto;
+  box-shadow: 0 2px 12px rgba(196, 112, 75, 0.35);
 }
 
 .burger__line {
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--color-text);
+  background: var(--color-surface);
   border-radius: 2px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -1124,13 +1123,13 @@ button {
   }
 }
 
-@media (max-width: 768px) {
-  :root {
-    --section-padding: 60px;
-  }
-
+@media (max-width: 992px) {
   .burger {
     display: flex;
+    position: fixed;
+    top: 13px;
+    right: 16px;
+    z-index: 1200;
   }
 
   .header__inner .nav {
@@ -1168,10 +1167,12 @@ button {
     z-index: 1100;
     box-shadow: -8px 0 32px rgba(45, 42, 38, 0.15);
     overflow: hidden;
+    pointer-events: none;
   }
 
   .nav--open {
     transform: translateX(0);
+    pointer-events: auto;
   }
 
   .nav__head {
@@ -1208,9 +1209,11 @@ button {
     text-align: left;
     border-radius: var(--radius-md);
   }
+}
 
-  .burger {
-    z-index: 1101;
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px;
   }
 
   .cards-grid--3,
