@@ -160,6 +160,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   height: var(--header-height);
 }
 
@@ -169,11 +170,13 @@ button {
   font-weight: 800;
   color: var(--color-terracotta);
   letter-spacing: -0.02em;
+  flex-shrink: 0;
 }
 
 .nav {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
 .nav__head {
@@ -235,28 +238,27 @@ button {
   display: none;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 5px;
   width: 44px;
   height: 44px;
-  background: none;
-  border: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
   cursor: pointer;
   padding: 10px;
-  z-index: 1001;
+  flex-shrink: 0;
+  z-index: 1101;
+  margin-left: auto;
 }
 
-.burger span,
 .burger__line {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2px;
   background: var(--color-text);
   border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-.burger span {
-  display: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .burger--active .burger__line:nth-child(1) {
@@ -872,6 +874,17 @@ button {
   border-radius: calc(var(--radius-xl) - 8px);
 }
 
+.team-collage__caption {
+  margin-top: 20px;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-terracotta-dark);
+  font-style: italic;
+  line-height: 1.6;
+}
+
 .photo-grid {
   columns: 4;
   column-gap: 16px;
@@ -1118,6 +1131,10 @@ button {
 
   .burger {
     display: flex;
+  }
+
+  .header__inner .nav {
+    margin-left: 0;
   }
 
   .nav-overlay {

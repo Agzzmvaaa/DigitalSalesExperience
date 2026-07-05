@@ -65,6 +65,11 @@
   <header class="header" id="header">
     <div class="header__inner">
       <a href="#hero" class="header__logo">🇪🇸 ¡Madrid!</a>
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
       <nav class="nav" id="nav" aria-label="Основная навигация">
         <div class="nav__head">
           <span class="nav__title">Меню</span>
@@ -81,11 +86,6 @@
           <a href="#tips" class="nav__link">Лайфхаки</a>
         </div>
       </nav>
-      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-        <span class="burger__line"></span>
-      </button>
     </div>
     <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
   </header>
@@ -337,7 +337,7 @@
 
           <article class="card card--museum">
             <div class="card__img-wrap">
-              <img src="images/places/museo-prado.jpg" alt="Зал с картинами в Музее Прадо, Мадрид" loading="lazy" width="400" height="300" />
+              <img src="images/places/museo-prado.jpg" alt="Интерьер Музея Прадо, Мадрид" loading="lazy" width="400" height="300" />
             </div>
             <div class="card__body">
               <h3 class="card__title">Музей Прадо</h3>
@@ -354,7 +354,7 @@
 
           <article class="card card--museum">
             <div class="card__img-wrap">
-              <img src="images/places/reina-sofia.jpg" alt="Музей Reina Sofía" loading="lazy" width="400" height="300" />
+              <img src="images/places/reina-sofia.jpg" alt="Двор Museo Reina Sofía, Мадрид" loading="lazy" width="400" height="300" />
             </div>
             <div class="card__body">
               <h3 class="card__title">Музей Reina Sofía</h3>
@@ -465,7 +465,7 @@
 
           <article class="sport-block">
             <div class="sport-block__img">
-              <img src="images/places/madrid-rio.jpg" alt="Велосипедные маршруты Мадрида" loading="lazy" width="600" height="400" />
+              <img src="images/places/madrid-rio.jpg" alt="Велозабег в Мадриде" loading="lazy" width="600" height="400" />
             </div>
             <div class="sport-block__content">
               <h3 class="sport-block__title">Велосипедные маршруты</h3>
@@ -559,7 +559,7 @@
 
           <article class="card card--activity">
             <div class="card__img-wrap">
-              <img src="images/places/flamenco.jpg" alt="Мастер-класс фламенко" loading="lazy" width="400" height="300" />
+              <img src="images/places/flamenco.jpg" alt="Фламенко с кастаньетами" loading="lazy" width="400" height="300" />
             </div>
             <div class="card__body">
               <h3 class="card__title">Фламенко</h3>
@@ -667,18 +667,19 @@
           </span>
           <h2 class="section__title">Наши общие моменты</h2>
           <p class="section__desc">
-            Наши совместные фотографии — чтобы тёплые воспоминания
-            всегда были рядом, где бы ты ни была!
+            Наше совместное фото — чтобы команда всегда была рядом с тобой,
+            где бы ты ни оказалась. Мы скучаем уже сейчас!
           </p>
         </div>
         <figure class="team-collage">
           <img
             src="images/team/team-collage.png"
-            alt="Наш коллаж команды — ИТ ЛОХ, ДИДЖИТАЛ БОГ"
+            alt="Наше совместное фото команды"
             loading="lazy"
             width="1024"
             height="799"
           />
+          <figcaption class="team-collage__caption">Наше общее фото — мы всегда рядом, где бы ты ни была ❤️</figcaption>
         </figure>
 
       </div>
