@@ -34,22 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   nav.querySelectorAll('.nav__link').forEach(link => {
-    link.addEventListener('click', closeMenu);
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (!href || !href.startsWith('#')) return;
+
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      closeMenu();
+      const top = target.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 8;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
   });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && nav.classList.contains('nav--open')) {
       closeMenu();
     }
-  });
-
-  // ----------------------------------------
-  // 2. Заглушки href="#" — без перезагрузки
-  // ----------------------------------------
-  document.querySelectorAll('a[href="#"]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-    });
   });
 
   // ----------------------------------------
@@ -139,24 +141,29 @@ document.addEventListener('DOMContentLoaded', () => {
     .map(link => document.getElementById(link.getAttribute('href').slice(1)))
     .filter(Boolean);
 
-  const highlightNav = () => {
-    const scrollPos = window.scrollY + header.offsetHeight + 40;
-    let currentId = navSections[0]?.id;
-
-    navSections.forEach(section => {
-      if (scrollPos >= section.offsetTop) {
-        currentId = section.id;
-      }
-    });
-
+  const setActiveNav = (id) => {
     navLinks.forEach(link => {
-      const isActive = link.getAttribute('href') === `#${currentId}`;
-      link.classList.toggle('nav__link--active', isActive);
+      link.classList.toggle('nav__link--active', link.getAttribute('href') === `#${id}`);
     });
   };
 
-  window.addEventListener('scroll', highlightNav, { passive: true });
-  highlightNav();
+  if (navSections.length) {
+    const navObserver = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+      if (visible.length) {
+        setActiveNav(visible[0].target.id);
+      }
+    }, {
+      rootMargin: '-35% 0px -55% 0px',
+      threshold: [0, 0.15, 0.35, 0.55]
+    });
+
+    navSections.forEach(section => navObserver.observe(section));
+    setActiveNav(navSections[0].id);
+  }
 
   // ----------------------------------------
   // 7. Параллакс декораций hero

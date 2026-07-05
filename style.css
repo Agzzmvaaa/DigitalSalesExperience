@@ -137,17 +137,16 @@ button {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(250, 248, 245, 0.85);
+  background: rgba(250, 248, 245, 0.97);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid transparent;
-  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease;
 }
 
 .header--scrolled {
-  background: rgba(250, 248, 245, 0.95);
-  border-bottom-color: var(--color-border);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .header__inner {
@@ -182,10 +181,15 @@ button {
   transition: all 0.3s ease;
 }
 
-.nav__link:hover,
-.nav__link--active {
-  color: var(--color-terracotta);
+.nav__link:hover {
+  color: var(--color-terracotta-dark);
   background: var(--color-terracotta-light);
+}
+
+.nav__link--active {
+  color: var(--color-terracotta-dark);
+  background: var(--color-terracotta-light);
+  font-weight: 600;
 }
 
 .burger {
@@ -235,20 +239,15 @@ button {
   text-align: center;
   padding: calc(var(--header-height) + 48px) 24px 80px;
   overflow: hidden;
-  background: linear-gradient(
-    160deg,
-    var(--color-bg) 0%,
-    var(--color-sand-light) 40%,
-    var(--color-terracotta-light) 100%
-  );
+  background: var(--color-bg);
 }
 
 .hero__bg {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 600px 400px at 20% 30%, rgba(196, 112, 75, 0.1) 0%, transparent 70%),
-    radial-gradient(ellipse 500px 500px at 80% 70%, rgba(122, 140, 94, 0.1) 0%, transparent 70%);
+    linear-gradient(180deg, rgba(250, 248, 245, 0.92) 0%, rgba(250, 248, 245, 0.78) 45%, rgba(245, 240, 235, 0.95) 100%),
+    url('images/hero/madrid-skyline.jpg') center / cover no-repeat;
   pointer-events: none;
 }
 
@@ -258,6 +257,7 @@ button {
   max-width: 720px;
 }
 
+.hero__greeting,
 .hero__subtitle,
 .hero__title,
 .hero__quote,
@@ -266,12 +266,25 @@ button {
   animation: heroFadeIn 0.9s ease forwards;
 }
 
+.hero__greeting {
+  animation-delay: 0.05s;
+}
+
 .hero__subtitle {
   animation-delay: 0.15s;
 }
 
 .hero__title {
   animation-delay: 0.35s;
+}
+
+.hero__greeting {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--color-terracotta-dark);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
 }
 
 .hero__quote {
@@ -789,8 +802,31 @@ button {
 }
 
 /* ========================================
-   ФОТО-ГАЛЕРЕЯ
+   ФОТО КОМАНДЫ
    ======================================== */
+.team-collage {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 12px;
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s ease;
+}
+
+.team-collage:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.team-collage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: calc(var(--radius-xl) - 8px);
+}
+
 .photo-grid {
   columns: 4;
   column-gap: 16px;
@@ -1043,29 +1079,34 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(250, 248, 245, 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: var(--color-bg);
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 40px 24px;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 4px;
+    padding: 24px;
     transform: translateX(100%);
-    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease, visibility 0.35s ease;
     z-index: 999;
+    overflow-y: auto;
+    border-top: 1px solid var(--color-border);
   }
 
   .nav--open {
     transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav__link {
-    font-size: 1.2rem;
-    padding: 14px 24px;
+    font-size: 1.1rem;
+    padding: 16px 20px;
     width: 100%;
-    max-width: 280px;
-    text-align: center;
+    max-width: none;
+    text-align: left;
+    border-radius: var(--radius-md);
   }
 
   .cards-grid--3,
@@ -1159,6 +1200,7 @@ button {
     transform: none;
   }
 
+  .hero__greeting,
   .hero__subtitle,
   .hero__title,
   .hero__quote,
