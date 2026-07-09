@@ -1,6 +1,8 @@
 // Лента общих фото команды
 
 const FEED_PHOTOS = [
+  { src: 'images/team/feed/photo-090.jpg', alt: 'Наше общее фото 90', tall: true },
+  { src: 'images/team/feed/photo-091.jpg', alt: 'Наше общее фото 91', tall: true },
   { src: 'images/team/feed/photo-001.jpg', alt: 'Наше общее фото 1', tall: true },
   { src: 'images/team/feed/photo-002.jpg', alt: 'Наше общее фото 2', tall: false },
   { src: 'images/team/feed/photo-003.jpg', alt: 'Наше общее фото 3', tall: true },
