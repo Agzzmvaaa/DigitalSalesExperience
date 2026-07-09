@@ -85,6 +85,10 @@ const FEED_PHOTOS = [
   { src: 'images/team/feed/photo-082.jpg', alt: 'Наше общее фото 82', tall: false },
   { src: 'images/team/feed/photo-083.jpg', alt: 'Наше общее фото 83', tall: false },
   { src: 'images/team/feed/photo-084.jpg', alt: 'Наше общее фото 84', tall: false },
+  { src: 'images/team/feed/photo-085.jpg', alt: 'Наше общее фото 85', tall: false },
+  { src: 'images/team/feed/photo-086.jpg', alt: 'Наше общее фото 86', tall: false },
+  { src: 'images/team/feed/photo-087.jpg', alt: 'Наше общее фото 87', tall: false },
+  { src: 'images/team/feed/photo-088.jpg', alt: 'Наше общее фото 88', tall: false },
 ];
 
 document.addEventListener('DOMContentLoaded', () => {

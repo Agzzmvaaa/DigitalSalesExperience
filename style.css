@@ -898,12 +898,14 @@ button {
 .team-collage__actions {
   display: flex;
   justify-content: center;
+  width: 100%;
   margin-top: 24px;
 }
 
 .joy-slider {
-  display: inline-flex;
-  max-width: 100%;
+  display: flex;
+  width: 100%;
+  max-width: 520px;
   text-decoration: none;
   transition: transform 0.3s ease;
 }
@@ -915,7 +917,7 @@ button {
 .joy-slider__track {
   position: relative;
   display: block;
-  width: min(100%, 440px);
+  width: 100%;
   height: 58px;
   padding: 5px;
   border-radius: 50px;
@@ -933,12 +935,14 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 60px;
+  padding: 0 58px;
   font-family: var(--font-heading);
-  font-size: clamp(0.82rem, 2.5vw, 0.95rem);
+  font-size: clamp(0.85rem, 2.8vw, 0.95rem);
   font-weight: 700;
   color: var(--color-terracotta-dark);
   letter-spacing: 0.01em;
+  line-height: 1.2;
+  text-align: center;
   z-index: 1;
   pointer-events: none;
   white-space: nowrap;
@@ -1017,30 +1021,63 @@ button {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+  .joy-slider {
+    max-width: none;
+  }
+
   .joy-slider__track {
-    width: 100%;
-    height: 54px;
+    height: 62px;
   }
 
   .joy-slider__thumb {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .joy-slider__label {
-    padding: 0 52px;
-    font-size: 0.78rem;
+    padding: 0 50px;
+    font-size: clamp(0.78rem, 3.6vw, 0.92rem);
   }
 
   @keyframes joySliderMove {
     0% {
       left: 5px;
-      transform: scale(1);
+      transform: translateY(-50%) scale(1);
     }
     100% {
-      left: calc(100% - 49px);
-      transform: scale(1.04);
+      left: calc(100% - 47px);
+      transform: translateY(-50%) scale(1.04);
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .joy-slider__track {
+    height: 68px;
+  }
+
+  .joy-slider__label {
+    white-space: normal;
+    padding: 0 46px;
+    font-size: 0.76rem;
+  }
+
+  .joy-slider__thumb {
+    width: 38px;
+    height: 38px;
+  }
+
+  @keyframes joySliderMove {
+    0% {
+      left: 5px;
+      transform: translateY(-50%) scale(1);
+    }
+    100% {
+      left: calc(100% - 43px);
+      transform: translateY(-50%) scale(1.04);
     }
   }
 }
