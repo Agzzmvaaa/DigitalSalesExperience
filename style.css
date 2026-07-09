@@ -901,6 +901,162 @@ button {
   margin-top: 24px;
 }
 
+.joy-slider {
+  display: inline-flex;
+  max-width: 100%;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.joy-slider:hover {
+  transform: translateY(-3px);
+}
+
+.joy-slider__track {
+  position: relative;
+  display: block;
+  width: min(100%, 440px);
+  height: 58px;
+  padding: 5px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--color-terracotta-light) 0%, #f5e0d4 50%, var(--color-terracotta-light) 100%);
+  background-size: 200% 100%;
+  border: 2px solid rgba(196, 112, 75, 0.25);
+  box-shadow: 0 4px 20px rgba(196, 112, 75, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  animation: joyTrackGlow 3s ease-in-out infinite;
+}
+
+.joy-slider__label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 60px;
+  font-family: var(--font-heading);
+  font-size: clamp(0.82rem, 2.5vw, 0.95rem);
+  font-weight: 700;
+  color: var(--color-terracotta-dark);
+  letter-spacing: 0.01em;
+  z-index: 1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.joy-slider__thumb {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffffff 0%, #f8f0eb 100%);
+  box-shadow: 0 3px 14px rgba(196, 112, 75, 0.35), 0 1px 3px rgba(45, 42, 38, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  animation: joySliderMove 2.8s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+}
+
+.joy-slider__thumb-icon {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-terracotta);
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.joy-slider:hover .joy-slider__thumb-icon {
+  transform: translateX(2px);
+}
+
+.joy-slider__shine {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  z-index: 3;
+  pointer-events: none;
+  animation: joySliderShine 2.8s ease-in-out infinite;
+}
+
+@keyframes joySliderMove {
+  0% {
+    left: 5px;
+    transform: scale(1);
+  }
+  100% {
+    left: calc(100% - 53px);
+    transform: scale(1.04);
+  }
+}
+
+@keyframes joySliderShine {
+  0%, 100% {
+    left: -60%;
+    opacity: 0;
+  }
+  40%, 60% {
+    opacity: 1;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+@keyframes joyTrackGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .joy-slider__track {
+    width: 100%;
+    height: 54px;
+  }
+
+  .joy-slider__thumb {
+    width: 44px;
+    height: 44px;
+  }
+
+  .joy-slider__label {
+    padding: 0 52px;
+    font-size: 0.78rem;
+  }
+
+  @keyframes joySliderMove {
+    0% {
+      left: 5px;
+      transform: scale(1);
+    }
+    100% {
+      left: calc(100% - 49px);
+      transform: scale(1.04);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .joy-slider__thumb,
+  .joy-slider__shine,
+  .joy-slider__track {
+    animation: none;
+  }
+
+  .joy-slider__thumb {
+    left: calc(100% - 53px);
+  }
+}
+
 /* ========================================
    ЛЕНТА ФОТО КОМАНДЫ
    ======================================== */
