@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лента наших фото — ¡Buen viaje в Мадрид!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">🇪🇸 ¡Madrid!</a>
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <div class="nav__head">
+          <span class="nav__title">Меню</span>
+          <button class="nav__close" id="navClose" type="button" aria-label="Закрыть меню">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="nav__links">
+          <a href="index.html#food" class="nav__link">Где поесть</a>
+          <a href="index.html#art" class="nav__link">Искусство</a>
+          <a href="index.html#sport" class="nav__link">Спорт</a>
+          <a href="index.html#leisure" class="nav__link">Досуг</a>
+          <a href="index.html#photos" class="nav__link nav__link--active">Фото</a>
+          <a href="index.html#tips" class="nav__link">Лайфхаки</a>
+        </div>
+      </nav>
+    </div>
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+  </header>
+
+  <main class="feed-page">
+    <div class="container">
+      <a href="index.html#photos" class="feed-page__back">← Назад к подарку</a>
+
+      <div class="feed-page__header">
+        <h1 class="feed-page__title">Лента наших фото</h1>
+        <p class="feed-page__desc">
+          84 общих момента команды — нажми на фото, чтобы открыть крупнее.
+        </p>
+      </div>
+
+      <div class="feed-grid" id="feedGrid">
+        <p class="feed-empty" id="feedEmpty">
+          Скоро здесь появятся новые фото — команда уже готовит сюрприз!
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <div class="feed-lightbox" id="feedLightbox" aria-hidden="true">
+    <button class="feed-lightbox__close" id="feedLightboxClose" type="button" aria-label="Закрыть">&times;</button>
+    <img class="feed-lightbox__img" id="feedLightboxImg" src="" alt="" />
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">С любовью, команда ❤️</p>
+      <p class="footer__sub">¡Te echaremos de menos! Мы будем скучать</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="team-feed.js"></script>
+</body>
+</html>
